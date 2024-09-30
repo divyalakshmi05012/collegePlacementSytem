@@ -50,7 +50,7 @@ const JobList = () => {
                             <tr key={job._id} className="text-center">
                                 <td>{index + 1}</td> 
                                 <td className="py-2 px-4 border">{job.title}</td>
-                                <td className="py-2 px-4 border">{job.jobId}</td>
+                                <td className="py-2 px-4 border">{job.jobPostingId}</td>
                                 <td className="py-2 px-4 border">{job.company}</td>
                                 <td className="py-2 px-4 border">{job.description}</td>
                                 <td className="py-2 px-4 border">

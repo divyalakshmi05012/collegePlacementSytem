@@ -8,7 +8,7 @@ const ApplicationForm = () => {
     applicationId:'',
     studentId: '',
     studentName: '',
-    jobId: '',
+    jobPostingId: '',
     resume: null,
     coverLetter: null,
     status: 'pending'
@@ -83,7 +83,7 @@ const ApplicationForm = () => {
           />
         </div>
         <div>
-          <label htmlFor="studentId">Student ID:</label>
+          <label htmlFor="studentId">studentId:</label>
           <input
             type="text"
             id="studentId"
@@ -94,7 +94,7 @@ const ApplicationForm = () => {
           />
         </div>
         <div>
-          <label htmlFor="studentName">Student Name:</label>
+          <label htmlFor="studentName">studentName:</label>
           <input
             type="text"
             id="studentName"
@@ -105,18 +105,18 @@ const ApplicationForm = () => {
           />
         </div>
         <div>
-          <label htmlFor="jobId">Job ID:</label>
+          <label htmlFor="jobPostingId">JobId:</label>
           <input
             type="text"
-            id="jobId"
-            name="jobId"
-            value={formData.jobId}
+            id="jobPostingId"
+            name="jobPostingId"
+            value={formData.jobPostingId}
             onChange={handleChange}
             required
           />
         </div>
         <div>
-          <label htmlFor="resume">Resume (PDF only):</label>
+          <label htmlFor="resume">resume (PDF only):</label>
           <input
             type="file"
             id="resume"
