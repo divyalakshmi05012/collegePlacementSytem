@@ -36,6 +36,7 @@ const JobList = () => {
                         <th className="py-2">SerialNo</th>
                         <th className="py-2">Title</th>
                         <th className="py-2">JobId</th>
+                        <th className="py-2">Company</th>
                         <th className="py-2">Description</th>
                         <th className="py-2">Requirements</th>
                         <th className="py-2">Salary</th>
@@ -50,6 +51,7 @@ const JobList = () => {
                                 <td>{index + 1}</td> 
                                 <td className="py-2 px-4 border">{job.title}</td>
                                 <td className="py-2 px-4 border">{job.jobId}</td>
+                                <td className="py-2 px-4 border">{job.company}</td>
                                 <td className="py-2 px-4 border">{job.description}</td>
                                 <td className="py-2 px-4 border">
                                     <ul className="list-disc text-left">

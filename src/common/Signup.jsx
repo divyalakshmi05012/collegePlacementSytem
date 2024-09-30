@@ -2,7 +2,28 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import AxiosService from '../utils/AxiosService';
 import ApiRoutes from '../utils/ApiRoutes';
-import background from '../assets/back2.jpg'
+import background from '../assets/back2.jpg';
+
+const courses = [
+  'Full Stack Developer',
+  'Data Science',
+  'UI/UX Designer',
+  'Java Developer',
+  'Python Developer',
+];
+
+const companies = [
+  'Google',
+  'Microsoft',
+  'Amazon',
+  'Apple',
+  'Facebook',
+  'IBM',
+  'Oracle',
+  'Cisco',
+  'Intel',
+  'Adobe',
+];
 
 const Signup = () => {
   const [formData, setFormData] = useState({
@@ -46,25 +67,25 @@ const Signup = () => {
   };
 
   return (
-    <div className="signin-wrapper" >
+    <div className="signin-wrapper" style={{ backgroundImage: `url(${background})` }}>
       <h2 className="title">Signup</h2>
       {error && <p className="text-red-500 text-center">{error}</p>}
       <form onSubmit={handleSubmit}>
         <div className="name">
-          <label >Name:</label>
-          <input type="text" name="name" value={formData.name} onChange={handleChange}required/>
+          <label>Name:</label>
+          <input type="text" name="name" value={formData.name} onChange={handleChange} required />
         </div>
         <div className="label">
           <label>Email:</label>
-          <input type="email" name="email"  value={formData.email} onChange={handleChange} required/>
+          <input type="email" name="email" value={formData.email} onChange={handleChange} required />
         </div>
         <div className="mb-4">
           <label className="block text-gray-700">Password:</label>
-          <input type="password"  name="password" value={formData.password} onChange={handleChange} required />
+          <input type="password" name="password" value={formData.password} onChange={handleChange} required />
         </div>
         <div className="role">
-          <label >Role:</label>
-          <select  name="role" value={formData.role} onChange={handleChange}>
+          <label>Role:</label>
+          <select name="role" value={formData.role} onChange={handleChange}>
             <option value="Student">Student</option>
             <option value="Company">Company</option>
           </select>
@@ -72,24 +93,34 @@ const Signup = () => {
         {formData.role === 'Student' && (
           <>
             <div className="studentid">
-              <label >Student ID:</label>
+              <label>Student ID:</label>
               <input type="text" name="studentId" value={formData.studentId} onChange={handleChange} />
             </div>
             <div className="course">
               <label>Course:</label>
-              <input type="text" name="course" value={formData.course} onChange={handleChange} />
+              <select name="course" value={formData.course} onChange={handleChange}>
+                <option value="">Select a course</option>
+                {courses.map((course) => (
+                  <option key={course} value={course}>{course}</option>
+                ))}
+              </select>
             </div>
           </>
         )}
         {formData.role === 'Company' && (
           <>
             <div className="companyid">
-              <label >Company ID:</label>
-              <input type="text" name="companyId" value={formData.companyId}  onChange={handleChange} />
+              <label>Company ID:</label>
+              <input type="text" name="companyId" value={formData.companyId} onChange={handleChange} />
             </div>
             <div className="company-name">
-              <label >Company Name:</label>
-              <input type="text" name="companyName" value={formData.companyName}  onChange={handleChange}/>
+              <label>Company Name:</label>
+              <select name="companyName" value={formData.companyName} onChange={handleChange}>
+                <option value="">Select a company</option>
+                {companies.map((company) => (
+                  <option key={company} value={company}>{company}</option>
+                ))}
+              </select>
             </div>
           </>
         )}

@@ -31,6 +31,10 @@ const ApiRoutes = {
       path: '/application/apply',
       auth: false
     },
+    GET_APPLICATION_BY_COMAPNY:{
+      path:'/applications/jobPosting/:jobPostingId',
+      auth:false
+    },
     GET_ALL_APPLICATION:{
       path:'/application/getAllApplication',
       auth:false
