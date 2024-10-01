@@ -53,10 +53,10 @@ const ApplicationList = () => {
                                <td>{index + 1}</td> 
                                 <td className="py-2">{application.studentName}</td>
                                 <td className="py-2">{application.studentId}</td>
-                                <td className="py-2">{application.jobPostingId.jobId}</td>
-                               <td className="py-2">{application.jobPostingId.title}</td>
-                               <td className="py-2">{application.jobPostingId.company}</td>
-                               <td className="py-2">{application.jobPostingId.requirements}</td>
+                                <td className="py-2">{application.jobPostingId}</td>
+                               <td className="py-2">{application.title}</td>
+                               <td className="py-2">{application.company}</td>
+                               <td className="py-2">{application.requirements}</td>
                                <td className="py-2">{application.status}</td>
                                <td className="py-2">{new Date(application.appliedDate).toLocaleDateString()}</td>
                            </tr>
