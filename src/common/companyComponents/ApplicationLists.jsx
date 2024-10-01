@@ -9,8 +9,7 @@ const ApplicationLists = ({ jobPostingId }) => {
   useEffect(() => {
     const fetchApplications = async () => {
       try {
-        const response = await AxiosService.get(
-          ApiRoutes.GET_APPLICATION_BY_COMAPNY.path.replace(':jobPostingId', jobPostingId),
+        const response = await AxiosService.get(`{ApiRoutes.GET_APPLICATION_BY_COMAPNY.path}/${jobPostingId}`,
           { authenticate: ApiRoutes.GET_APPLICATION_BY_COMAPNY.auth }
         );
         setApplications(response.data); 
