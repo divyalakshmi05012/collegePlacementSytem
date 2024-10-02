@@ -6,7 +6,7 @@ import ApiRoutes from '../../utils/ApiRoutes';
 const JobPostings = () => {
   const [title, setTitle] = useState('');
   const [company, setCompany] = useState('');
-  const [jobId, setJobId] = useState('');
+  const [jobPostingId, setJobPostingId] = useState('');
   const [location, setLocation] = useState('');
   const [description, setDescription] = useState('');
   const [requirements, setRequirements] = useState('');
@@ -18,7 +18,7 @@ const JobPostings = () => {
       const newJob = {
         title,
         company,
-        jobId,
+        jobPostingId,
         location,
         description,
         requirements: requirements.split(',').map((req) => req.trim()), 
@@ -29,7 +29,7 @@ const JobPostings = () => {
       toast.success('Job posted successfully!');
       setTitle('');
       setCompany('');
-      setJobId('');
+      setJobPostingId('');
       setLocation('');
       setDescription('');
       setRequirements('');
@@ -53,8 +53,8 @@ const JobPostings = () => {
           <input type="text" value={company} onChange={(e) => setCompany(e.target.value)} required />
         </div>
         <div className="mb-4">
-          <label>JobId</label>
-          <input type="text" value={jobId} onChange={(e) => setJobId(e.target.value)} required />
+          <label>JobPostingId</label>
+          <input type="text" value={jobPostingId} onChange={(e) => setJobPostingId(e.target.value)} required />
         </div>
         <div className="mb-4">
           <label>Location</label>

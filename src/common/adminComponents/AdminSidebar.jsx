@@ -7,7 +7,7 @@ const AdminSidebar = () => {
       <ul>
         <li><Link to="application">ManageApplications</Link></li>
         <li><Link to="drives">ManageDrives</Link></li>
-        <li><Link to="student">ManageStudent</Link></li>
+        <li><Link to="student">StudentList</Link></li>
         <li><Link to="report">Reports</Link></li>
       </ul>
     </div>

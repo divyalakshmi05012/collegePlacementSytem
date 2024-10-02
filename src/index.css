@@ -997,6 +997,8 @@ tbody tr:hover {
   td:nth-of-type(7):before { content: "Posted Date"; }
   td:nth-of-type(8):before { content: "Actions"; }
 }
+.submit-student-application{
+  background-color:#42c2f5;}
 
 
 

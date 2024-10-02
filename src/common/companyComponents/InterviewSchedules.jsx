@@ -7,7 +7,7 @@ import ApiRoutes from '../../utils/ApiRoutes';
 const InterviewSchedules = () => {
     const[applicationId,setApplicationId]= useState('');
     const [studentId, setStudentId] = useState('');
-    const [jobId, setJobId] = useState('');
+    const [jobPostingId, setJobPostingId] = useState('');
     const [companyName, setCompanyName] = useState('');
     const [companyId, setCompanyId] = useState('');
     const [date, setDate] = useState('');
@@ -20,7 +20,7 @@ const InterviewSchedules = () => {
         let response = await AxiosService.post(ApiRoutes.CREATE_INTERVIEW.path, {
           applicationId,
           studentId, 
-          jobId, 
+          jobPostingId, 
           companyName, 
           companyId, 
           date, 
@@ -49,8 +49,8 @@ const InterviewSchedules = () => {
             <input type="text" value={studentId} onChange={(e) => setStudentId(e.target.value)} required />
           </div>
           <div className="mb-4">
-            <label>Job ID</label>
-            <input type="text" value={jobId} onChange={(e) => setJobId(e.target.value)} required />
+            <label>JobPostingID</label>
+            <input type="text" value={jobPostingId} onChange={(e) => setJobPostingId(e.target.value)} required />
           </div>
           <div className="mb-4">
             <label>Company Name</label>

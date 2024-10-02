@@ -43,7 +43,6 @@ const ApplicationList = () => {
                            <th className="py-2">Job Title</th>
                            <th className="py-2">Company</th>
                            <th className="py-2">Requirements</th>
-                           <th className="py-2">Status</th>
                            <th className="py-2">Applied Date</th>
                        </tr>
                    </thead>
@@ -54,10 +53,9 @@ const ApplicationList = () => {
                                 <td className="py-2">{application.studentName}</td>
                                 <td className="py-2">{application.studentId}</td>
                                 <td className="py-2">{application.jobPostingId}</td>
-                               <td className="py-2">{application.title}</td>
-                               <td className="py-2">{application.company}</td>
-                               <td className="py-2">{application.requirements}</td>
-                               <td className="py-2">{application.status}</td>
+                               <td className="py-2">{application.jobPostId.title}</td>
+                               <td className="py-2">{application.jobPostId.company}</td>
+                               <td className="py-2">{application.jobPostId.requirements}</td>
                                <td className="py-2">{new Date(application.appliedDate).toLocaleDateString()}</td>
                            </tr>
                        ))}

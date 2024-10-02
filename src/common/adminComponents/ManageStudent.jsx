@@ -3,6 +3,7 @@ import AxiosService from '../../utils/AxiosService';
 import ApiRoutes from '../../utils/ApiRoutes';
 
 const ManageStudents = () => {
+  // const studentId = sessionStorage.getItem('studentId');
   const [students, setStudents] = useState([]);
 
   useEffect(() => {
@@ -19,15 +20,6 @@ const ManageStudents = () => {
   }, []);
 
   
-  const handleDelete = async (studentId) => {
-    try {
-      await AxiosService.delete(`${ApiRoutes.DELETE_STUDENT.path}/${studentId}`);
-      setStudents(students.filter((student) => student._id !== studentId));
-    } catch (error) {
-      console.error('Error deleting student:', error);
-    }
-  };
-
   return (
     <div>
       <h1 className="text-3xl font-bold mb-6">Manage Students</h1>
@@ -38,7 +30,6 @@ const ManageStudents = () => {
             <th >Name</th>
             <th>StudentId</th>
             <th >Email</th>
-            <th>Actions</th>
           </tr>
         </thead>
         <tbody>
@@ -48,11 +39,6 @@ const ManageStudents = () => {
               <td className="py-2">{student.name}</td>
               <td className="py-2">{student.studentId}</td>
               <td className="py-2">{student.email}</td>
-              <td className="py-2">
-                <button className='student-delete'  onClick={() => handleDelete(student._id)}>
-                  Delete
-                </button>
-              </td>
             </tr>
           ))}
         </tbody>

@@ -136,20 +136,7 @@ const ApplicationForm = () => {
             onChange={handleFileChange}
           />
         </div>
-        <div>
-          <label htmlFor="status">Status:</label>
-          <select
-            id="status"
-            name="status"
-            value={formData.status}
-            onChange={handleChange}
-          >
-            <option value="pending">Pending</option>
-            <option value="accepted">Accepted</option>
-            <option value="rejected">Rejected</option>
-          </select>
-        </div>
-        <button type="submit">Submit Application</button>
+        <button type="submit" className='submit-student-application'>Submit Application</button>
       </form>
     </div>
   );

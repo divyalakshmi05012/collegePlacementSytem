@@ -31,17 +31,9 @@ const ApiRoutes = {
       path: '/application/apply',
       auth: false
     },
-    GET_APPLICATION_BY_COMAPNY:{
-      path:'/applications/jobPosting/:jobPostingId',
-      auth:false
-    },
     GET_ALL_APPLICATION:{
       path:'/application/getAllApplication',
       auth:false
-    },
-    UPDATE_APPLICATION_STATUS:{
-       path:'/application//update-status',
-       auth:false
     },
     GET_INTERVIEW_BY_STUDENT_ID:{
         path:'/interview/getPlacement/:studentId',
@@ -54,6 +46,10 @@ const ApiRoutes = {
     GET_ALL_DRIVE:{
       path:'/placement/drive',
       auth:true
+    },
+    GET_APPLICATION_BY_COMAPNY:{
+      path:'/application/getAllApplication',
+      auth:false
     },
     CREATE_DRIVE:{
       path:'/placement/create',
